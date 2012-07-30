@@ -1,0 +1,17 @@
+%h1 Ad#new
+= form_for @ad do |f|
+	= render 'shared/error_messages'
+
+	%h4 Name
+	= f.text_field :name
+
+	%h4 Start Date
+	= f.text_field :start_date, :placeholder => 'YYYY-MM-DD'
+
+	%h4 End Date
+	= f.text_field :end_date, :placeholder => 'YYYY-MM-DD'
+
+
+	%br
+	%br
+	= f.submit "Save" 
