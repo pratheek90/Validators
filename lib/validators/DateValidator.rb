@@ -1,10 +1,9 @@
-class DateValidator < ActiveModel::Validator
+class DateValidator < ActiveModel::EachValidator
 
-def validate(record)
+def validate_each(record, attribute, value)
 	
-	if !record.end_date.blank? and record.end_date < record.start_date
-      record.errors[:end_date] << (options[:message] || "should be dated after Start date") 
-    end
-  end
-
+	if !value.blank? and value < record[options[:begin]]
+	record.errors[attribute] << (options[:message] || "should be dated before Start date")
+	end
+end
 end
