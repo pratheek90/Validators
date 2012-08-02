@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe DateValidator do
+describe DateOrderValidator do
 
-subject{DateValidator.new(:attribute => [:end_date])}
+subject{DateOrderValidator.new(:attribute => [:end_date])}
 
 it "should not be valid if dated before start_date" do
 	pending "add logic to perform validation"
