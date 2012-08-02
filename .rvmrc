@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-rvm use --create 1.9.2@oor
-rvm gemset import
-bundle         
