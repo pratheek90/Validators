@@ -4,4 +4,4 @@ require File.expand_path('../application', __FILE__)
 # Initialize the rails application
 Validator::Application.initialize!
 
-require 'validators/DateValidator'
+require 'validators/date_order_validator'
