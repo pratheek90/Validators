@@ -3,6 +3,10 @@ class DateOrderValidator < ActiveModel::EachValidator
 
     if !value.blank? and value < record[options[:must_be_after]]
       record.errors.add(attribute, :date_not_valid)
-	end
+		elsif value == record[options[:must_be_after]]
+			record.errors.add(attribute, :date_not_valid)
+    end
+  
+
   end
 end
