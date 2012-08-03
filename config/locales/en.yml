@@ -4,4 +4,4 @@
 en:
   errors:
     messages:
-      date_not_valid: 'should be dated after Start date!'
+      invalid_date: 'should be dated after Start date!'

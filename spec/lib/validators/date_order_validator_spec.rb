@@ -5,7 +5,7 @@ describe DateOrderValidator do
     @attr = { :name => "foo", :start_date => Date.today, :end_date =>  Date.today  - 1 }                 
     ad = Ad.new(@attr)
     ad.valid?
-    ad.errors[:end_date].should include I18n.t('errors.messages.date_not_valid')
+    ad.errors[:end_date].should include I18n.t('errors.messages.invalid_date')
   end
 
   it "should be valid if dated after start_date" do
@@ -18,7 +18,7 @@ describe DateOrderValidator do
     @attr = { :name => "foo", :start_date => Date.today, :end_date =>  Date.today}          
     ad = Ad.new(@attr)
 		ad.valid?
-    ad.errors[:end_date].should include I18n.t('errors.messages.date_not_valid')  
+    ad.errors[:end_date].should include I18n.t('errors.messages.invalid_date')  
   end
 
 end
