@@ -6,10 +6,11 @@
 	= f.text_field :name
 
 	%h4 Start Date
-	= f.text_field :start_date, :placeholder => 'YYYY-MM-DD'
+	= f.date_select :start_date
+
 
 	%h4 End Date
-	= f.text_field :end_date, :placeholder => 'YYYY-MM-DD'
+	= f.date_select :end_date 
 
 
 	%br
