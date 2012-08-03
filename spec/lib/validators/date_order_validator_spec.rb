@@ -8,7 +8,8 @@ describe DateOrderValidator do
   	it "should not be valid if dated before start_date" do
   	ad = Ad.new(@attr)
   	ad.valid?
-  	ad.errors[:end_date].should include "should be dated before Start date"
+  	ad.errors[:end_date].should include I18n.t('errors.messages.date_not_valid')
+
 	end
 
 end
