@@ -12,7 +12,8 @@ gem 'sqlite3'
 
 
 group :test do
-  gem "rspec-rails"   
+  gem "rspec-rails"
+  gem "rspec-mocks"   
 end
 
 # Gems used only for assets and not required
